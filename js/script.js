@@ -1,23 +1,43 @@
-// Function to display details dynamically
-function showDetails(type) {
-    const details = {
-        web: "I have built multiple responsive and dynamic web projects using HTML, CSS, and JavaScript.",
-        graphic: "I love creating visual art using Adobe Photoshop and Illustrator to convey creative ideas.",
-        video: "Using Adobe Premiere Pro, I edit and produce engaging videos with creative storytelling."
-    };
+// Details for each feature
+const featureDetails = {
+    web: {
+        title: "Web Development",
+        description: "I have developed responsive and interactive web projects using HTML, CSS, and JavaScript, ensuring functionality and modern design."
+    },
+    graphic: {
+        title: "Graphic Design",
+        description: "I love creating stunning visuals and designs using Adobe Photoshop and Illustrator, mostly Canva; turning ideas into engaging visual art."
+    },
+    video: {
+        title: "Video Editing",
+        description: "I edit and produce engaging video content using Adobe Premiere Pro and CapCut focusing on storytelling and dynamic visuals."
+    }
+};
 
-    // Get the details section and update the text content
-    const detailsSection = document.getElementById("details");
-    const detailsText = document.getElementById("details-text");
+// Function to display modal with feature details
+function showDetails(featureType) {
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalDescription = document.getElementById("modal-description");
 
-    // Update the content based on the type
-    detailsText.innerText = details[type];
+    // Update content dynamically
+    modalTitle.innerText = featureDetails[featureType].title;
+    modalDescription.innerText = featureDetails[featureType].description;
 
-    // Display the section
-    detailsSection.style.display = "block";
+    // Show the modal
+    modal.style.display = "flex";
 }
 
-// Function to close the details section
+// Function to hide the modal
 function hideDetails() {
-    document.getElementById("details").style.display = "none";
+    const modal = document.getElementById("modal");
+    modal.style.display = "none";
 }
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
