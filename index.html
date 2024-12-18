@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css/styles.css">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <!-- Font Awesome Integration -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <img src="images/logo.png" alt="Site Logo">
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="video.html">VIDEO</a>
+        <a href="comment.html">COMMENT</a>
+    </nav>
+
+    <!-- Main Header -->
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="content">
+            <img src="images/logo.png" alt="Logo">
+            <h1>Welcome to My Personal Portfolio</h1>
+            <p>
+                I'm <span class="highlight">Alia Azwa</span>, a creative student passionate about 
+                <strong>technology</strong>, <strong>multimedia</strong>, and <strong>design</strong>. 
+                Discover my projects, skills, and inspiration as you explore this website.
+            </p>
+            <a class="btn" href="portfolio.html">Explore My Work</a>
+        </div>
+    </div>
+
+  <!-- Animated Section -->
+<section class="animated-section">
+    <h2>What You Will Find Here</h2>
+    <div class="features">
+        <div class="feature-card" onclick="showDetails('web')">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Web Development</h3>
+            <p>Discover my web projects, coded with creativity and precision.</p>
+        </div>
+        <div class="feature-card" onclick="showDetails('graphic')">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Graphic Design</h3>
+            <p>See stunning visuals and designs crafted using Adobe tools.</p>
+        </div>
+        <div class="feature-card" onclick="showDetails('video')">
+            <i class="fas fa-film"></i>
+            <h3>Video Editing</h3>
+            <p>Explore dynamic video projects showcasing my editing skills.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Hidden Details Section -->
+<div id="details" class="hidden-details">
+    <p id="details-text"></p>
+    <button onclick="hideDetails()">Close</button>
+</div>
+
+<!-- Link to External JavaScript -->
+<script src="js/script.js"></script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Alia Azwa. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Preloader -->
+    <script>
+        window.addEventListener("load", function() {
+            const preloader = document.getElementById("preloader");
+            setTimeout(() => {
+                preloader.style.opacity = "0";
+                setTimeout(() => preloader.style.display = "none", 1000);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

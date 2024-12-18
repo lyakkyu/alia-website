@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css/portfolio-styles.css">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <!-- Font Awesome Integration -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav>
+    <img src="images/logo.png" alt="Site Logo">
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="biodata.html">BIODATA</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="video.html">VIDEO</a>
+        <a href="comment.html">COMMENT</a>
+    </div>
+</nav>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Portfolio</h2>
+        <p class="intro">Explore my works and ongoing projects. Each work showcases different skills and creativity.</p>
+        <div class="portfolio-container">
+            <!-- Project 1 -->
+            <div class="portfolio-item" onclick="showDetails('ar')">
+                <img src="images/ar.jpg" alt="Augmented Reality" class="portfolio-img">
+                <h3>Augmented Reality - Children Storybook</h3>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-item" onclick="showDetails('blender')">
+                <video controls class="portfolio-img">
+                    <source src="video/animation.mp4" type="video/mp4">
+                </video>
+                <h3>3D Modeling, Rigging, and Animating</h3>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-item" onclick="showDetails('graphic')">
+                <img src="images/graphic.png" alt="Graphic Design" class="portfolio-img">
+                <h3>Graphic Design</h3>
+            </div>
+        </div>
+    </section>
+
+<!-- Hidden Details Section -->
+<div id="details" class="hidden-details">
+    <div id="details-image"></div> <!-- Container for the image or video -->
+    <h2 id="details-title"></h2>
+    <p id="details-text"></p>
+    <button onclick="hideDetails()">Close</button>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Alia Azwa. All rights reserved.</p>
+    </footer>
+
+    <!-- Link JavaScript -->
+    <script src="js/portfolio-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* General body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background: url('../images/bg-4.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Navigation bar styles */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    z-index: 3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+    margin-left: 20px;
+    height: 40px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333333;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #666666;
+}
+
+/* Video Section Styles */
+.video-section {
+    margin: 100px auto 40px;
+    max-width: 1000px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-section h2 {
+    font-size: 1.8rem;
+    color: #005a99;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.video-card {
+    width: calc(50% - 10px); /* Two videos per row */
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-card iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.video-card h3 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin: 10px 0;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-card {
+        width: 90%; /* Full width on small screens */
+        margin-bottom: 20px;
+    }
+}
